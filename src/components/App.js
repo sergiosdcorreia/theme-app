@@ -1,6 +1,7 @@
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import './App.scss';
 
@@ -10,8 +11,17 @@ function App() {
 
   const toggleTheme = () => setDarkTheme(!darkTheme);
 
+  // Adding the 'dark-mode' class to the DOM element
+  if (darkTheme) {
+    document.body.classList.add('dark-mode');
+  } else {
+    document.body.classList.remove('dark-mode');
+  }
+
   return (
-    <div className={darkTheme ? "app dark-mode" : "app"}>
+    <div className="app">
+      <Link to="/">Home</Link>
+      <Link to="/page2">Page 2</Link>
       <div className="level">
         <div>
           <h1 className="title">Dark Mode Challenge</h1>
@@ -19,12 +29,12 @@ function App() {
 
         {/* --The button that should toggle dark mode-- */}
         <button 
-          className={ darkTheme ? "app__light-mode-btn icon level-right" : "app__dark-mode-btn icon level-right"} 
+          className="app__dark-mode-btn icon level-right" 
           onClick={toggleTheme}
         >
           {
             darkTheme ?
-            <FontAwesomeIcon icon={faSun} /> :
+            <FontAwesomeIcon icon={faSun} color="#FFA500" /> :
             <FontAwesomeIcon icon={faMoon} />
           }
         </button>

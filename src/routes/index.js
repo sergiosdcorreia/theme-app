@@ -8,12 +8,8 @@ function Routes() {
   return (
     
     <Switch>
-      <Route exact path="/">
-        <App />
-      </Route>
-      <Route exact path="/page2">
-        <Page2 />
-      </Route>
+      <Route exact path="/" component={App} />
+      <Route path="/page2" component={Page2} />
     </Switch>
   )
 }

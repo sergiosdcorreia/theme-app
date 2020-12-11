@@ -1,7 +1,3 @@
-# MRP React Coding Challenge
-
-### Time required: ~30 minutes
-
 ## Overview
 The goal of this challange is to add dark mode functionality to a single page application, it is intended to help us better understand your approach to solving problems using React and JavaScript.
 

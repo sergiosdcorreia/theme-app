@@ -7,7 +7,7 @@ import './App.scss';
 
 function App() {
 
-  const [ darkTheme, setDarkTheme ] = useState(false);
+  const [ darkTheme, setDarkTheme ] = useState();
 
   const toggleTheme = () => setDarkTheme(!darkTheme);
 

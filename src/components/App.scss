@@ -25,11 +25,6 @@
     }
   }
 
-  &__light-mode-btn {
-    @extend .app__dark-mode-btn;
-    color: $beige;
-  }
-
   .buttons > .button {
     height: 30px;
     width: 100px;
